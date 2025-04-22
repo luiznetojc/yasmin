@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files/* Remove margem padrão do navegador */
+body {
+	margin: 0;
+	height: 100vh;
+	background-image: url('assets/fundo.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-family: sans-serif;
+  }
+  

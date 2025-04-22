@@ -1,0 +1,21 @@
+<div class="container">
+	<h1 class="title">Qual senha do meu Coracao?</h1>
+  
+	<div class="form">
+	  <input
+		type="password"
+		[(ngModel)]="senhaDigitada"
+		placeholder="Digite a senha"
+		class="input"
+	  />
+	  <button class="btn" (click)="verificarSenha()">Entrar</button>
+	</div>
+  
+	<div *ngIf="acessoPermitido" class="imagem-container">
+	  <h2 class="title">Acertou!</h2>
+	  <img src="../assets/foto.jpg" alt="Imagem protegida">
+	</div>
+  
+	<p *ngIf="senhaIncorreta" class="erro">Senha incorreta. Tente novamente.</p>
+  </div>
+  
