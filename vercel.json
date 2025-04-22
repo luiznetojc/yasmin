@@ -5,32 +5,14 @@
 		"src": "package.json",
 		"use": "@vercel/static-build",
 		"config": {
-		  "distDir": "dist/yasmin/browser",
-		  "outputDirectory": "dist/yasmin/browser"
+		  "distDir": "dist/yasmin/browser"
 		}
 	  }
 	],
 	"routes": [
 	  {
-		"src": "/assets/(.*)",
-		"headers": {
-		  "Cache-Control": "public, max-age=31536000, immutable"
-		},
-		"continue": true
-	  },
-	  {
-		"src": "/.+\\.(css|js|txt|ico|json|svg|png|jpg|jpeg|gif|webp|woff|woff2|ttf|eot)$",
-		"headers": {
-		  "Cache-Control": "public, max-age=31536000, immutable"
-		},
-		"continue": true
-	  },
-	  {
 		"src": "/(.*)",
-		"dest": "/index.html",
-		"headers": {
-		  "Cache-Control": "no-cache, no-store, must-revalidate"
-		}
+		"dest": "/index.html"
 	  }
 	]
   }
