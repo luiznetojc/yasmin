@@ -35,6 +35,11 @@
           },
           "configurations": {
             "production": {
+				"baseHref": "/",
+				"deployUrl": "/",
+				"optimization": true,
+				"extractLicenses": true,
+				"sourceMap": false,
               "budgets": [
                 {
                   "type": "initial",
