@@ -1,20 +1,26 @@
 {
+	"version": 2,
 	"builds": [
 	  {
-		"src": "dist/yasmin/**/*",
-		"use": "@vercel/static"
+		"src": "package.json",
+		"use": "@vercel/static-build",
+		"config": {
+		  "distDir": "dist/yasmin/browser"
+		}
 	  }
 	],
 	"routes": [
-	  { "src": "/(.*)", "dest": "/index.html" }
+	  {
+		"src": "/(.*)",
+		"dest": "/index.html"
+	  }
 	],
 	"headers": [
-	  {
+		{
 		"source": "/(.*)\\.js",
 		"headers": [
-		  { "key": "Content-Type", "value": "application/javascript" }
+			{ "key": "Content-Type", "value": "application/javascript" }
 		]
-	  }
+		}
 	]
   }
-  
